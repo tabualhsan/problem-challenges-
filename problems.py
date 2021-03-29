@@ -141,3 +141,21 @@ class Solution:
 
 
     or s.reverse()
+
+
+
+
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        #iterate through all the elements in nums
+        #if some number in the nums is new to the array append it 
+        #if the number is called again remove it
+        
+        not_duplicate = []
+        
+        for num in nums:
+            if num not in not_duplicate:
+                not_duplicate.append(num)
+            else:
+                not_duplicate.remove(num)
+        return not_duplicate.pop()
