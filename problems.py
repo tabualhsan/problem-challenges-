@@ -159,3 +159,40 @@ class Solution:
             else:
                 not_duplicate.remove(num)
         return not_duplicate.pop()
+
+
+TWO SUM 
+
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        
+        #iterate through the list of numbers 
+        
+        
+#         n = nums.length 
+        
+#         if(n<2):
+#             return []
+        
+        
+#         num.sort()
+        
+#         for i from 0 to n - 2: 
+#             for j from i + 1 to n- 1:
+
+
+        two_sum_dict = {}
+
+        for i, num in enumerate(nums):
+            remaining = target - num
+
+            if remaining in two_sum_dict:
+                return[two_sum_dict[remaining], i]
+            else:
+                two_sum_dict[num] = i
+        return []
